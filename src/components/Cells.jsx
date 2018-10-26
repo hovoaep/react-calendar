@@ -3,8 +3,17 @@ import dateFns from "date-fns";
 import { connect } from "react-redux";
 import { onDateClick } from "../actions/calendarActions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import Modal from "./Modal";
 class Cells extends Component {
+  state = {
+    show: false
+  };
+  addNote = () => {
+    this.setState({ show: true });
+  };
+  closeModal = () => {
+    this.setState({ show: false });
+  };
   render() {
     const { currentMonth, selectedDate } = this.props;
     const monthStart = dateFns.startOfMonth(currentMonth);
@@ -38,7 +47,7 @@ class Cells extends Component {
             <span className="number">{formattedDate}</span>
             <span className="bg">{formattedDate}</span>
             <div className="cell-icon">
-              <FontAwesomeIcon onClick={() => console.log(1111)} icon="edit" />
+              <FontAwesomeIcon icon="edit" onClick={this.addNote} />
             </div>
           </div>
         );
@@ -52,7 +61,12 @@ class Cells extends Component {
       days = [];
     }
 
-    return <div className="body">{rows}</div>;
+    return (
+      <React.Fragment>
+        <div className="body">{rows}</div>
+        {this.state.show && <Modal closeModal={this.closeModal} />}
+      </React.Fragment>
+    );
   }
 }
 

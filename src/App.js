@@ -4,10 +4,11 @@ import Calendar from "./components/Calendar";
 import { Provider } from "react-redux";
 import store from "./store";
 import "./App.css";
+import "./modal.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faEdit, faTrash, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faEdit);
+library.add(faEdit, faTrash, faTimes);
 
 class App extends React.Component {
   render() {

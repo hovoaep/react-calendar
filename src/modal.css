@@ -1,0 +1,51 @@
+.modal {
+  z-index: 1048;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.modal-content {
+  background-color: white;
+  max-width: 500px;
+  padding: 50px;
+  border-radius: 10%;
+  align-self: flex-start;
+  margin-top: 250px;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+  transition: all 0.3s ease-out;
+}
+
+.modal-backdrop.show {
+  opacity: 0.5;
+}
+
+.event-container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 400px;
+}
+
+.close-modal {
+  background-color: #fff;
+  border: 0;
+  border-radius: 50%;
+  position: fixed;
+  top: 10px;
+  z-index: 1050;
+  right: 10px;
+  padding: 5px;
+}
