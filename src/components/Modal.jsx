@@ -24,7 +24,7 @@ class Modal extends Component {
           <li key={item}>
             {item}
             <span>
-              <FontAwesomeIcon icon="edit" onClick={} />
+              <FontAwesomeIcon icon="edit" />
               <FontAwesomeIcon icon="trash" />
             </span>
           </li>
@@ -35,11 +35,11 @@ class Modal extends Component {
     );
     return (
       <div>
-        <button className="close-modal" onClick={this.props.closeModal}>
-          <FontAwesomeIcon icon="times" />
-        </button>
         <div className="modal">
           <div className="modal-content">
+            <button className="close-modal" onClick={this.props.closeModal}>
+              <FontAwesomeIcon icon="times" />
+            </button>
             <h3>12 septmeber</h3>
             <div className="event-container">
               <div className="event">

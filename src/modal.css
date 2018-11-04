@@ -43,9 +43,8 @@
   background-color: #fff;
   border: 0;
   border-radius: 50%;
-  position: fixed;
-  top: 10px;
   z-index: 1050;
-  right: 10px;
   padding: 5px;
+  float: right;
+  border: 1px solid gray;
 }

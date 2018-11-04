@@ -8,7 +8,9 @@ class Cells extends Component {
   state = {
     show: false
   };
-  addNote = () => {
+  addNote = e => {
+    console.log(e);
+    console.log(e.target.closest());
     this.setState({ show: true });
   };
   closeModal = () => {
